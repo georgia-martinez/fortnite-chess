@@ -13,9 +13,6 @@ public class DesktopLauncher {
 		Graphics.DisplayMode dm = Lwjgl3ApplicationConfiguration.getDisplayMode();
 		config.setWindowedMode(dm.width, dm.height);
 
-		System.out.println(dm.width);
-		System.out.println(dm.height);
-
 		config.setForegroundFPS(60);
 		config.setTitle("fortnite-chess");
 

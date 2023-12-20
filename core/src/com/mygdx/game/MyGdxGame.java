@@ -22,11 +22,7 @@ public class MyGdxGame extends ApplicationAdapter {
 
         batch.begin();
 
-        for (Sprite[] row : chessBoard.squares()) {
-            for (Sprite square : row) {
-                square.draw(batch);
-            }
-        }
+        drawChessBoard();
 
         batch.end();
     }
@@ -34,5 +30,13 @@ public class MyGdxGame extends ApplicationAdapter {
     @Override
     public void dispose() {
         batch.dispose();
+    }
+
+    private void drawChessBoard() {
+        for (Square[] row : chessBoard.squares()) {
+            for (Square square : row) {
+                square.sprite().draw(batch);
+            }
+        }
     }
 }

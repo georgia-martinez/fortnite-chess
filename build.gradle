@@ -9,7 +9,7 @@ buildscript {
         google()
     }
     dependencies {
-        
+
 
     }
 }
@@ -42,6 +42,9 @@ allprojects {
 project(":desktop") {
     apply plugin: "java-library"
 
+    apply plugin: "java"
+    sourceCompatibility = 16
+    targetCompatibility = 16
 
     dependencies {
         implementation project(":core")
@@ -54,6 +57,9 @@ project(":desktop") {
 project(":core") {
     apply plugin: "java-library"
 
+    apply plugin: "java"
+    sourceCompatibility = 16
+    targetCompatibility = 16
 
     dependencies {
         api "com.badlogicgames.gdx:gdx:$gdxVersion"

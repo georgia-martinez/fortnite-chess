@@ -1,7 +1,6 @@
 package com.mygdx.game;
 
 import com.badlogic.gdx.ApplicationAdapter;
-import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.utils.ScreenUtils;
 
@@ -36,6 +35,14 @@ public class MyGdxGame extends ApplicationAdapter {
         for (Square[] row : chessBoard.squares()) {
             for (Square square : row) {
                 square.sprite().draw(batch);
+            }
+        }
+
+        for (Piece[] row : chessBoard.pieces()) {
+            for (Piece piece : row) {
+                if (piece == null) continue;
+
+                piece.sprite().draw(batch);
             }
         }
     }
